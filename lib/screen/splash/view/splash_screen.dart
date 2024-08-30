@@ -13,8 +13,12 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(const Duration(seconds: 3),() => Get.offAllNamed("home"),);
+    Future.delayed(
+      const Duration(seconds: 3),
+      () => Get.offAllNamed("home"),
+    );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,8 +27,15 @@ class _SplashScreenState extends State<SplashScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset("assets/logo/logo.png",height: 200,width: 150,fit: BoxFit.cover,),
-            const SizedBox(height: 4,),
+            Image.asset(
+              "assets/logo/logo.png",
+              height: 150,
+              width: 200,
+              fit: BoxFit.cover,
+            ),
+            const SizedBox(
+              height: 4,
+            ),
             const Text("Shopping App")
           ],
         ),
