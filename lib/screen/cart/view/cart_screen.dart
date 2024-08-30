@@ -19,6 +19,12 @@ class _CartScreenState extends State<CartScreen> {
  TextEditingController imageTxt=TextEditingController();
  GlobalKey<FormState> key=GlobalKey<FormState>();
  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    dbController.getData();
+  }
+ @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
