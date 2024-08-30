@@ -77,8 +77,8 @@ class _CartScreenState extends State<CartScreen> {
                                     await DBHelper.helper
                                         .delete(dbController.dBList[index].id!);
                                     Get.snackbar("SuccessFully deleted", "😊");
-                                    await dbController.getData();
                                     Get.back();
+                                    await dbController.getData();
                                   },
                                   child: const Text("Yes")),
                             ]);
@@ -205,8 +205,8 @@ class _CartScreenState extends State<CartScreen> {
                       dec: decTxt.text,
                       image: imageTxt.text);
                   await DBHelper.helper.update(model);
-                  await dbController.getData();
                   Get.back();
+                  await dbController.getData();
                   nameTxt.clear();
                   decTxt.clear();
                   imageTxt.clear();
@@ -220,8 +220,8 @@ class _CartScreenState extends State<CartScreen> {
                       image: imageTxt.text,
                       id: dId);
                   await DBHelper.helper.update(model);
-                  await dbController.getData();
                   Get.back();
+                  await dbController.getData();
                   nameTxt.clear();
                   decTxt.clear();
                   imageTxt.clear();

@@ -89,8 +89,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                     await CloudFirestoreHelper.fireDBHelper
                                         .deleteData(fireBaseController
                                             .productList[index].id!);
-                                    await fireBaseController.getData();
                                     Get.back();
+                                    await fireBaseController.getData();
                                     Get.snackbar("SuccessFully deleted", "😊");
                                   },
                                   child: Text("Yes")),
@@ -237,8 +237,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       dec: decTxt.text,
                       image: imageTxt.text);
                   await CloudFirestoreHelper.fireDBHelper.addData(model);
-                  await fireBaseController.getData();
                   Get.back();
+                  await fireBaseController.getData();
                   nameTxt.clear();
                   decTxt.clear();
                   imageTxt.clear();
@@ -252,8 +252,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       image: imageTxt.text,
                       id: dId);
                   await CloudFirestoreHelper.fireDBHelper.updateData(model);
-                  await fireBaseController.getData();
                   Get.back();
+                  await fireBaseController.getData();
                   nameTxt.clear();
                   decTxt.clear();
                   imageTxt.clear();
